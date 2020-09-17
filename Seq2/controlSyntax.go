@@ -25,6 +25,12 @@ func main() {
 	println("(･ω･)switchを使った場合~~~~~~~~~~")
 	for i := 1; i <= 100; i = i + 1 {
 		str := ""
+		switch {
+		case i%2 == 0:
+			str = "偶数"
+		default:
+			str = "奇数"
+		}
 
 		println(strconv.Itoa(i) + "-" + str)
 	}
