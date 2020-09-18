@@ -1,8 +1,13 @@
 package main
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
+	// 解答例
+	// https://play.golang.org/p/pruHZLxX8jc
 
 	println("(･ω･)if文を使った場合~~~~~~~~~~")
 	for i := 1; i <= 100; i = i + 1 {
@@ -23,15 +28,12 @@ func main() {
 
 	println("")
 	println("(･ω･)switchを使った場合~~~~~~~~~~")
-	for i := 1; i <= 100; i = i + 1 {
-		str := ""
+	for i := 1; i <= 100; i++ {
 		switch {
 		case i%2 == 0:
-			str = "偶数"
+			fmt.Printf("%d-偶数\n", i)
 		default:
-			str = "奇数"
+			fmt.Printf("%d-奇数\n", i)
 		}
-
-		println(strconv.Itoa(i) + "-" + str)
 	}
 }
