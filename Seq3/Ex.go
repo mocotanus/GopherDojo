@@ -17,4 +17,5 @@ func main() {
 		sum += ns[i]
 	}
 	println(sum)
+
 }
