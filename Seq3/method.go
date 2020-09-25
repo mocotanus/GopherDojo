@@ -1,18 +1,24 @@
 package main
 
+import "fmt"
+
+type Hex int
+
+func (h Hex) String() string {
+	return fmt.Sprintf("%x", int(h))
+}
+
+type T int
+
+func (t *T) f() { println("hi") }
+
 func main() {
-	// 関数の定義
+	// 100をHex型として代入
+	var hex Hex = 100
+	// Stringメソッドを呼び出す
+	fmt.Println(hex.String())
 
-	// 関数の呼び出し
-
-	// 無名関数
-
-	// 関数型
-
-	// クロージャと良くあるバグ
-
-	// 値のコピー
-
-	// ポインタ
-
+	var v T
+	(&v).f()
+	v.f()
 }
